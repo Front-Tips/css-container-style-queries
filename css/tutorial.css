@@ -1,0 +1,27 @@
+.product {
+  container-name: product;
+}
+
+/* -------- is new -------- */
+@container style(--isNew: true) {
+  .product {
+    border-color: var(--primary);
+
+    &::before {
+      content: "🔥 new";
+      background-color: var(--primary);
+    }
+  }
+}
+
+/* ------ is popular ------ */
+@container style(--isPopular: true) {
+  .product {
+    border-color: var(--secondary);
+
+    &::before {
+      content: "⭐ popular";
+      background-color: var(--secondary);
+    }
+  }
+}

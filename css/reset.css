@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+:root {
+  --primary: #36c007;
+  --secondary: #9507c0;
+  --background: #181824;
+  --white: #fff;
+  --black: #000;
+  --gray: #777;
+  --fontFamily: "Quicksand", sans-serif;
+  --fontWeightNormal: 400;
+  --fontSizeRoot: 20px;
+  --fontSizeLarge: 1.325rem;
+  --fontSizeSmall: 0.875rem;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: var(--fontSizeRoot);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+  color: var(--text-color);
+  font-family: var(--fontFamily);
+  background-color: var(--background);
+  cursor: default;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+/* ------------------------ */
+/*         UI Style         */
+/* ------------------------ */
+
+.product {
+  position: relative;
+  width: 395px;
+  margin-top: 2rem;
+  background-color: var(--white);
+  border: 10px solid transparent;
+  border-radius: 1rem;
+
+  &:before {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    padding: 0 0.6rem 0.2rem 0.6rem;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0 0 0 0.5rem;
+  }
+}
+
+.product img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.product__art {
+  position: relative;
+}
+
+.product__art:hover .button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.product__title {
+  margin-bottom: 10px;
+  font-size: var(--fontSizeLarge);
+}
+
+.product__link {
+  color: var(--black);
+}
+
+.product__link:hover {
+  text-decoration: underline;
+}
+
+.product__price {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: var(--fontWeightNormal);
+}
+
+.product__brand {
+  color: var(--gray);
+  text-transform: uppercase;
+}
